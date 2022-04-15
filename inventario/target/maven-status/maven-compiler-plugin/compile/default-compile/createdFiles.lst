@@ -1,0 +1,11 @@
+https\t4is_uv_mx\inventario\InventarioRequest.class
+https\t4is_uv_mx\inventario\BorrarInventarioRequest.class
+mx\uv\t4is\inventario\InventarioApplication.class
+https\t4is_uv_mx\inventario\BuscarInventarioResponse.class
+https\t4is_uv_mx\inventario\ObjectFactory.class
+https\t4is_uv_mx\inventario\package-info.class
+https\t4is_uv_mx\inventario\BorrarInventarioResponse.class
+https\t4is_uv_mx\inventario\ModificarInventarioRequest.class
+https\t4is_uv_mx\inventario\BuscarInventarioResponse$Inventario.class
+https\t4is_uv_mx\inventario\InventarioResponse.class
+https\t4is_uv_mx\inventario\ModificarInventarioResponse.class
