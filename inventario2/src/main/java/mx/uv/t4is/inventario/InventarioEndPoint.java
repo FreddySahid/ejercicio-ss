@@ -44,6 +44,7 @@ public class InventarioEndPoint {
     public BuscarInventarioResponse BuscarInventario(){
         BuscarInventarioResponse respuesta = new BuscarInventarioResponse();
         Iterable<Inventario> lista = iinventario.findAll();
+        
         for (Inventario o : lista) {
             BuscarInventarioResponse.Inventario inventarioBuscar = new BuscarInventarioResponse.Inventario();
             inventarioBuscar.setId(o.getId());
@@ -58,6 +59,8 @@ public class InventarioEndPoint {
     @ResponsePayload
     public ModificarInventarioResponse modificarInventario(@RequestPayload ModificarInventarioRequest peticion){
         ModificarInventarioResponse respuesta = new ModificarInventarioResponse();
+        /*Aunque recibe dos parametros no es necesario pedirlo, con uno solo se pueden agregar, 
+        ya que en el archivo inventario.xsd  se agrego el elemento de cantidad*/
         Inventario e = new Inventario();
         e.setId(peticion.getId());
         e.setNombre(peticion.getNombre());
@@ -72,6 +75,7 @@ public class InventarioEndPoint {
     @ResponsePayload
     public BorrarInventarioResponse borrarInventario(@RequestPayload BorrarInventarioRequest peticion){
         BorrarInventarioResponse respuesta = new BorrarInventarioResponse();
+        /*En este caso solo se pide un parametro, ya que la consulta la hace por medi del id*/
 
         iinventario.deleteById(peticion.getId());
         respuesta.setRespuesta(true);
